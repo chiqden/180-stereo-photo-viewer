@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>180 Stereo Photo Viewer</title>
+    <!--  A-Frame (https://github.com/aframevr/aframe)
+          Copyright © 2015-2017 A-Frame authors.
+          MIT License (https://github.com/aframevr/aframe/blob/master/LICENSE)  -->
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <!--  Exif.js (https://github.com/exif-js/exif-js)
+          Copyright (c) 2008 Jacob Seidelin
+          MIT License (https://github.com/exif-js/exif-js/blob/master/LICENSE.md)
+
+          Added support for Extended XMP for VR180 photos. (https://github.com/chiqden/exif-js/tree/add_support_for_extended_xmp)  -->
+    <script src="scripts/exif-js-v2.3.0-added-support-for-extended-xmp.js"></script>
+    <!--  180 Stereo Photo Viewer (https://github.com/chiqden/180-stereo-photo-viewer)
+          Copyright (c) 2019 chiqden
+          MIT License (https://github.com/chiqden/180-stereo-photo-viewer/blob/master/LICENSE)  -->
+    <script src="scripts/180-stereo-photo-viewer.js"></script>
+    <script src="scripts/offline-support.js"></script>
+</head>
+<body>
+<a-scene 180-stereo-photo-viewer file-picker loading-screen="backgroundColor: black" background="color: black">
+    <a-assets>
+        <img id="stereoImage" src="">
+    </a-assets>
+    <a-camera position="0 0 0" look-controls="reverseMouseDrag: true"></a-camera>
+    <a-text id="loadingText" position="0 0 -1" width="3" value="Loading..." align="center" visible="true"></a-text>
+    <a-text id="usageText" position="0 0 -1" width="2" value="Double-click(tap)\nto select a photo." align="center" visible="false"></a-text>
+</a-scene>
+</body>
+</html>
