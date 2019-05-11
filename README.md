@@ -1,6 +1,8 @@
 # 180 Stereo Photo Viewer
 A VR180 photo viewer that works on a web browser.
 
+You can try it here. https://chiqden.github.io/180-stereo-photo-viewer/
+
 ### Supported photo formats
 - VR180 photos (vr.jpg)
 - 180 stereo side by side photos
@@ -15,11 +17,11 @@ A VR180 photo viewer that works on a web browser.
 
 ### Usage
 - Specify a photo in HTML file  
-  Set the path of the photo to `index.html` `<img id="stereoImage" src="">`.  
+  Set the path of the photo to `index.html` `<img id="stereoImage" 👉src="">`.  
 - Select a photo in file picker  
   Double-click(tap) on the browser to select a photo.
 - To disable file picker  
-  Remove `file-picker` component from `index.html` `<a-scene 180-stereo-photo-viewer file-picker …>`
+  Remove `file-picker` component from `index.html` `<a-scene 180-stereo-photo-viewer 👉file-picker …>`
 - To disable offline support  
   1. Comment out `index.html` `<script src="scripts/offline-support.js"></script>`.
   2. Unregister the Service Worker.
