@@ -12,7 +12,7 @@ self.addEventListener('install', function (event) {
                         './scripts/exif-js-v2.3.0-added-support-for-extended-xmp.js',
                         './scripts/180-stereo-photo-viewer.js',
                         './scripts/offline-support.js',
-                        'https://aframe.io/releases/0.9.2/aframe.min.js',
+                        'https://aframe.io/releases/0.9.0/aframe.min.js',
                         'https://cdn.aframe.io/fonts/Roboto-msdf.json',
                         'https://cdn.aframe.io/fonts/Roboto-msdf.png'
                     ]
