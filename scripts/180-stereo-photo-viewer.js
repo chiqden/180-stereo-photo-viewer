@@ -231,8 +231,8 @@ function applyZenithCorrection(image) {
         if (posePitchDegrees === null) {
             posePitchDegrees = '0';
         }
-        leftEyeHemisphere.setAttribute('rotation', `${-posePitchDegrees} 0 ${-poseRollDegrees}`);
-        rightEyeHemisphere.setAttribute('rotation', `${-posePitchDegrees} 0 ${-poseRollDegrees}`);
+        leftEyeHemisphere.setAttribute('rotation', `${posePitchDegrees} 0 ${-poseRollDegrees}`);
+        rightEyeHemisphere.setAttribute('rotation', `${posePitchDegrees} 0 ${-poseRollDegrees}`);
     } else {
         leftEyeHemisphere.setAttribute('rotation', '0 0 0');
         rightEyeHemisphere.setAttribute('rotation', '0 0 0');
