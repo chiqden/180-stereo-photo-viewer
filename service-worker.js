@@ -1,5 +1,5 @@
 const APP_NAME = '180-stereo-photo-viewer';
-const VERSION = '1.0.1';
+const VERSION = '1.0.2';
 const CACHE_NAME = `${APP_NAME}-cache-v${VERSION}`;
 
 self.addEventListener('install', function (event) {
