@@ -1,5 +1,5 @@
 const APP_NAME = '180-stereo-photo-viewer';
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 const CACHE_NAME = `${APP_NAME}-cache-v${VERSION}`;
 
 self.addEventListener('install', function (event) {
@@ -7,12 +7,14 @@ self.addEventListener('install', function (event) {
         caches.open(CACHE_NAME)
             .then(cache => {
                 return cache.addAll([
-                        '/',
-                        '/index.html',
-                        'https://aframe.io/releases/0.9.0/aframe.min.js',
-                        '/scripts/exif-js-v2.3.0-added-support-for-extended-xmp.js',
-                        '/scripts/180-stereo-photo-viewer.js',
-                        '/scripts/offline-support.js'
+                        './',
+                        './index.html',
+                        './scripts/exif-js-v2.3.0-added-support-for-extended-xmp.js',
+                        './scripts/180-stereo-photo-viewer.js',
+                        './scripts/offline-support.js',
+                        'https://aframe.io/releases/0.9.2/aframe.min.js',
+                        'https://cdn.aframe.io/fonts/Roboto-msdf.json',
+                        'https://cdn.aframe.io/fonts/Roboto-msdf.png'
                     ]
                 );
             })
@@ -43,4 +45,4 @@ self.addEventListener('fetch', event => {
                 return fetch(event.request);
             })
     );
-})
+});
