@@ -90,6 +90,40 @@ AFRAME.registerComponent('file-picker', {
     }
 });
 
+AFRAME.registerComponent('recenter',  {
+    init: function() {
+        let cameraParent = this.el;
+        cameraParent.addEventListener('recenter', function () {
+            let rotationY = cameraParent.querySelector('a-camera').getAttribute('rotation').y;
+            cameraParent.setAttribute('rotation', {y: -rotationY});
+        });
+
+        function recenter() {
+            cameraParent.emit('recenter');
+        }
+
+        // for PC
+        window.addEventListener('keydown', function (event) {
+            if (event.key === ' ') {
+                recenter();
+            }
+        });
+
+        // for Mobile
+        let longTapTimer;
+
+        window.addEventListener('touchstart', function () {
+            longTapTimer = setTimeout(function () {
+                recenter();
+            }, 1000);
+        });
+
+        window.addEventListener('touchend', function () {
+            clearTimeout(longTapTimer);
+        })
+    }
+});
+
 window.onload = () => {
     generateBothEyeImages();
     generateBothEyeHemispheres();
