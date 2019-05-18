@@ -23,7 +23,9 @@
     <a-assets>
         <img id="stereoImage" src="">
     </a-assets>
-    <a-camera position="0 0 0" look-controls="reverseMouseDrag: true"></a-camera>
+    <a-entity recenter>
+        <a-camera position="0 0 0" look-controls="reverseMouseDrag: true" wasd-controls-enabled="false"></a-camera>
+    </a-entity>
     <a-text id="loadingText" position="0 0 -1" width="3" value="Loading..." align="center" visible="true"></a-text>
     <a-text id="usageText" position="0 0 -1" width="2" value="Double-click(tap)\nto select a photo." align="center" visible="false"></a-text>
 </a-scene>
