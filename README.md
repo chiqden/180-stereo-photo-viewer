@@ -20,6 +20,9 @@ You can try it here. https://chiqden.github.io/180-stereo-photo-viewer/
   Set the path of the photo to `index.html` `<img id="stereoImage" 👉src="">`.  
 - Select a photo in file picker  
   Double-click(tap) on the browser to select a photo.
+- Recenter  
+  Press the <kbd>Space</kbd> bar on the keyboard. (for PC)  
+  Long-Press on the browser. (for Mobile)
 - To disable file picker  
   Remove `file-picker` component from `index.html` `<a-scene 180-stereo-photo-viewer 👉file-picker …>`
 - To disable offline support  
